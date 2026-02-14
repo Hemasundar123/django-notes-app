@@ -4,18 +4,20 @@ pipeline{
     
     stages{
         stage("Start"){
-            echo "Start the CI"
+            steps{
+                echo "Start the CI"
+            }
         }
         
         stage("Code clone"){
             steps{
                 sh "whoami"
-            gitcheckout("https://github.com/Hemasundar123/django-notes-app/","main")
+                gitcheckout("https://github.com/Hemasundar123/django-notes-app/","main")
             }
         }
         stage("Code Build"){
             steps{
-            build("notes-app","latest")
+                build("notes-app","latest")
             }
         }
         stage("Push to DockerHub"){
