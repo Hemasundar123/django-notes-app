@@ -3,6 +3,10 @@ pipeline{
     agent { label 'Bleach'}
     
     stages{
+        stage("Start"){
+            echo "Start the CI"
+        }
+        
         stage("Code clone"){
             steps{
                 sh "whoami"
