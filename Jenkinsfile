@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage("Start"){
             steps{
-                echo "Start the CI Project"
+                echo "Start the CI"
             }
         }
         
