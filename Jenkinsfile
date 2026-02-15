@@ -22,7 +22,7 @@ pipeline{
         }
         stage("Push to DockerHub"){
             steps{
-                dockerpush("notes-app","v1.1","mikey699")
+                dockerpush("notes-app","v1","mikey699")
             }
         }
         stage("Deploy"){
