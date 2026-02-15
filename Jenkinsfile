@@ -1,6 +1,10 @@
-@Library('Mikey')_
+@Library('Mikey')
 pipeline{
     agent { label 'Bleach'}
+
+     triggers {
+        githubPush()
+    }
     
     stages{
         stage("Start"){
