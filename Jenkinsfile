@@ -17,12 +17,12 @@ pipeline{
         }
         stage("Code Build"){
             steps{
-                tagbuild("notes-app","v1")
+                tagbuild("notes-app","latest")
             }
         }
         stage("Push to DockerHub"){
             steps{
-                dockerpush("notes-app","v1","mikey699")
+                dockerpush("notes-app","latest","mikey699")
             }
         }
         stage("Deploy"){
