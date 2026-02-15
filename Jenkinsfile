@@ -2,9 +2,7 @@
 pipeline{
     agent { label 'Bleach'}
 
-     triggers {
-        githubPush()
-    }
+     
     
     stages{
         stage("Start"){
