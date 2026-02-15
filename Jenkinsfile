@@ -17,7 +17,7 @@ pipeline{
         }
         stage("Code Build"){
             steps{
-                tagbuild("notes-app","v1")
+                tagbuild("notes-app","latest")
             }
         }
         stage("Push to DockerHub"){
